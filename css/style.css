@@ -21,6 +21,7 @@ main {
 
 .mainNav h1 {
   margin-right: auto;
+  padding: 1rem;
 }
 
 .mainNav > a {
@@ -38,7 +39,7 @@ main {
 /* category list - knapper */
 .categorylist {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 1em;
 }
 
@@ -111,4 +112,14 @@ main {
 .red {
   background-color: red;
   padding: 0.2rem;
+}
+/* product */
+
+.product main {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1rem;
+}
+.product main img {
+  grid-column: 1/-1;
 }
