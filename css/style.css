@@ -23,7 +23,11 @@ main {
   margin-right: auto;
   padding: 1rem;
 }
-
+.mainNav h1 span {
+  color: tomato;
+  display: inline-block;
+  transform: scaleX(-1) translateX(-0.2rem);
+}
 .mainNav > a {
   display: block;
   text-decoration: none;
@@ -47,7 +51,8 @@ main {
   text-decoration: none;
   padding: 2em;
   color: white;
-  background-color: blue;
+  background-color: rgb(183, 46, 34);
+  border-radius: 0.5em;
 }
 
 /* product list */
@@ -86,37 +91,57 @@ main {
 }
 
 .grey {
-  /* background-color: black; */
+  background-color: rgb(44, 43, 43);
+  opacity: 70%;
+  color: white;
 }
 
 .productlist .soldOut img {
-  opacity: 0.3;
+  opacity: 0.5;
 }
 .productlist .soldoutTxt {
   display: none;
+  margin: 0.5rem;
+  padding: 0.5rem;
 }
 
 .productlist .soldOut .soldoutTxt {
   display: block;
+  position: absolute;
+  z-index: 100;
+}
+.productlist .soldOut::after {
+  content: "";
+  display: inline-block;
+  background-color: rgba(255, 255, 255, 0.442);
+  border: 0.1px solid lightgray;
+  height: 100%;
+  width: 100%;
+  position: absolute;
 }
 .productlist .discount_element p,
-.productlist .discounted.soldOut .discount_element p {
+.productlist .discounted .soldOut .discount_element p {
   display: none;
 }
-.productlist .discounted .discount_element {
+.discounted .discount_element {
   display: flex;
   justify-content: space-between;
   & p {
     display: block;
   }
 }
-.productlist article.discounted .price span {
+article.discounted .price span {
   text-decoration: line-through;
 }
 .red {
   background-color: red;
-  padding: 0.2rem;
+  color: black;
+  padding: 0.2rem 0.5rem;
+  display: inline-block;
+  border-radius: 4px;
+  font-weight: bold;
 }
+
 /* product */
 
 .product main {
@@ -126,4 +151,21 @@ main {
 }
 .product main img {
   grid-column: 1/-1;
+}
+.smallProduct {
+  border: 1px solid lightgray;
+  border-radius: 0.5em;
+  overflow: hidden;
+  padding: 1rem;
+}
+.smallProduct a {
+  text-decoration: none;
+  color: rgb(252, 251, 251);
+  background-color: rgb(7, 7, 7);
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+}
+
+.smallProduct a:hover {
+  background-color: rgb(173, 101, 95);
 }
